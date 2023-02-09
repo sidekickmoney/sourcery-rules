@@ -28,7 +28,8 @@ rule_settings:
   python_version: "3.11"
 
 rules:
-  - id: no-print-statements
+  # Duplicate rule of an existing default no-print-statements rule, for the purposes of temporary documentation.
+  - id: no-print-statements-duplicate
     description: Do not use print statements in the test directory.
     explanation: |
       Tests should use the `assert x, <message>` approach for emitting messages that explain why a test failed.
