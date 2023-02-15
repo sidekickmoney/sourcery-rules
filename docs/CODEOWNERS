@@ -1,2 +1,2 @@
-version @sidekick-eimantas
-docs/CODEOWNERS @sidekick-eimantas @sidekickmoney/management
+version @sidekickmoney/management @sidekick-eimantas
+docs/CODEOWNERS @sidekickmoney/management @sidekick-eimantas
