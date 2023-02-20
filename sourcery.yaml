@@ -27,21 +27,22 @@ rule_settings:
     - hover
   python_version: "3.11"
 
-rules:
-  # Duplicate rule of an existing default no-print-statements rule, for the purposes of temporary documentation.
-  - id: no-print-statements-duplicate
-    description: Do not use print statements in the test directory.
-    explanation: |
-      Tests should use the `assert x, <message>` approach for emitting messages that explain why a test failed.
-    pattern: print(...)
-    replacement:
-    condition:
-    paths:
-      include:
-      - tests/*.py
-      exclude:
-      - conftest.py
-    tests:
-      - match: print("test")
-      - no-match: rich.print("test")
-    tags: []
+# NOTE(Eimantas): Commented out for now as Sourcery is complaining that this contains a duplicate rule id
+# rules:
+#   # Duplicate rule of an existing default no-print-statements rule, for the purposes of temporary documentation.
+#   - id: no-print-statements-duplicate
+#     description: Do not use print statements in the test directory.
+#     explanation: |
+#       Tests should use the `assert x, <message>` approach for emitting messages that explain why a test failed.
+#     pattern: print(...)
+#     replacement:
+#     condition:
+#     paths:
+#       include:
+#       - tests/*.py
+#       exclude:
+#       - conftest.py
+#     tests:
+#       - match: print("test")
+#       - no-match: rich.print("test")
+#     tags: []
